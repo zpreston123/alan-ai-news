@@ -2,6 +2,7 @@
   "name": "alan-ai-news",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zpreston123.github.io/alan-ai-news/",
   "dependencies": {
     "@alan-ai/alan-sdk-web": "^1.3.0",
     "@material-ui/core": "^4.11.0",
