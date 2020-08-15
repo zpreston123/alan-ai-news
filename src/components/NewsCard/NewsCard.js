@@ -37,7 +37,7 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
                 <Typography variant="h5" color="textSecondary">{i + 1}</Typography>
             </CardActions>
         </Card>
-    )
+    );
 }
 
 export default NewsCard;

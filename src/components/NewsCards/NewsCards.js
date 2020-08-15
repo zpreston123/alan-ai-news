@@ -42,7 +42,7 @@ const NewsCards = ({ articles, activeArticle }) => {
                 ))}
             </Grid>
         </Grow>
-    )
+    );
 }
 
 export default NewsCards;

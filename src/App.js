@@ -44,7 +44,7 @@ const App = () => {
             </div>
             <NewsCards articles={newsArticles} activeArticle={activeArticle} />
         </div>
-    )
+    );
 }
 
 export default App;
