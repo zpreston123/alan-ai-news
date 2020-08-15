@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import {
+    Switch, ThemeProvider, createMuiTheme, CssBaseline,
+    FormControl, FormGroup, FormControlLabel, Grid
+} from '@material-ui/core';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
 import wordsToNumbers from 'words-to-numbers';
@@ -12,6 +16,13 @@ const App = () => {
     const [newsArticles, setNewsArticles] = useState([]);
     const [activeArticle, setActiveArticle] = useState(-1);
     const classes = useStyles();
+
+    const [darkMode, setDarkMode] = useState(false);
+    const theme = createMuiTheme({
+        palette: {
+            type: darkMode ? 'dark' : 'light'
+        }
+    });
 
     useEffect(() => {
         alanBtn({
@@ -38,12 +49,26 @@ const App = () => {
     }, [])
 
     return (
-        <div>
-            <div className={classes.logoContainer}>
-                <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo" />
+        <ThemeProvider theme={theme}>
+            <CssBaseline/>
+            <div>
+                <Grid container alignItems="flex-start" justify="flex-end" direction="row">
+                    <FormControl component="fieldset">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={<Switch onChange={() => setDarkMode(!darkMode)}/>}
+                                label="Dark"
+                                labelPlacement="start"
+                            />
+                        </FormGroup>
+                    </FormControl>
+                </Grid>
+                <div className={classes.logoContainer}>
+                    <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo"/>
+                </div>
+                <NewsCards articles={newsArticles} activeArticle={activeArticle}/>
             </div>
-            <NewsCards articles={newsArticles} activeArticle={activeArticle} />
-        </div>
+        </ThemeProvider>
     );
 }
 
