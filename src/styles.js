@@ -2,19 +2,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
     footer: {
+        backgroundColor: '#d8d8d8',
         textAlign: 'center',
-        position: 'fixed',
         left: 0,
         bottom: 0,
+        marginTop: '5%',
         color: 'black',
         width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '120px',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        },
+        height: '120px'
     },
     link: {
         textDecoration: 'none',
