@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
     Switch, ThemeProvider, createMuiTheme, CssBaseline,
-    FormControl, FormGroup, FormControlLabel, Grid, Typography
+    FormControl, FormGroup, FormControlLabel, Grid, Typography, Link
 } from '@material-ui/core';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
@@ -75,8 +75,7 @@ const App = () => {
                 <NewsCards articles={newsArticles} activeArticle={activeArticle}/>
                 <div className={classes.footer}>
                     <Typography variant="body1" component="h2">
-                        Data sourced from News API<br/><br/>
-                        newsapi.org
+                        Data fetched from <Link href="https://newsapi.org/">News API</Link>.
                     </Typography>
                 </div>
             </div>
