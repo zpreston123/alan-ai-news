@@ -4,16 +4,16 @@
   "private": true,
   "homepage": "https://zpreston123.github.io/alan-ai-news/",
   "dependencies": {
-    "@alan-ai/alan-sdk-web": "^1.4.0",
+    "@alan-ai/alan-sdk-web": "^1.8.0",
     "@material-ui/core": "^4.11.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.8",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.1",
+    "@testing-library/user-event": "^12.2.0",
     "classnames": "^2.2.6",
     "gh-pages": "^3.1.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0",
     "words-to-numbers": "^1.5.1"
   },
   "scripts": {
