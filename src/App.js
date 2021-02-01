@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
     Switch, ThemeProvider, createMuiTheme, CssBaseline,
     FormControl, FormGroup, FormControlLabel, Grid, Typography, Link
@@ -45,18 +45,18 @@ const App = () => {
                     }
                 }
             }
-        })
-    }, [])
+        });
+    }, []);
 
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline/>
+            <CssBaseline />
             <div>
                 <Grid container alignItems="flex-start" justify="flex-end" direction="row">
                     <FormControl component="fieldset">
                         <FormGroup>
                             <FormControlLabel
-                                control={<Switch onChange={() => setDarkMode(!darkMode)}/>}
+                                control={<Switch onChange={() => setDarkMode(!darkMode)} />}
                                 label="Dark"
                                 labelPlacement="start"
                             />
@@ -70,9 +70,9 @@ const App = () => {
                             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
                         </div>
                     ) : null}
-                    <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo"/>
+                    <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo" />
                 </div>
-                <NewsCards articles={newsArticles} activeArticle={activeArticle}/>
+                <NewsCards articles={newsArticles} activeArticle={activeArticle} />
                 <div className={classes.footer}>
                     <Typography variant="body1" component="h2">
                         Data fetched from <Link href="https://newsapi.org/">News API</Link>.
@@ -81,6 +81,6 @@ const App = () => {
             </div>
         </ThemeProvider>
     );
-}
+};
 
 export default App;

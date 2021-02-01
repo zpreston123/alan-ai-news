@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from 'react';
+import { useState, useEffect, createRef } from 'react';
 import { Card, CardActions, CardActionArea, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
 
 import useStyles from './styles.js';
@@ -21,7 +21,7 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
     return (
         <Card ref={elRefs[i]} className={activeArticle === i ? classes.activeCard : classes.card}>
             <CardActionArea href={url} target="_blank">
-                <CardMedia className={classes.media} image={urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'}/>
+                <CardMedia className={classes.media} image={urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'} />
                 <div className={classes.details}>
                     <Typography variant="body2" color="textSecondary" component="h2">{(new Date(publishedAt)).toDateString()}</Typography>
                     <Typography variant="body2" color="textSecondary" component="h2">{source.name}</Typography>
@@ -37,6 +37,6 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
             </CardActions>
         </Card>
     );
-}
+};
 
 export default NewsCard;
