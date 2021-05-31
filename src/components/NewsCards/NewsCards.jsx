@@ -1,3 +1,4 @@
+import React from 'react';
 import { Grid, Grow, Typography } from '@material-ui/core';
 
 import useStyles from './styles.js';
