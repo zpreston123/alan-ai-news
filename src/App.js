@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    Switch, ThemeProvider, createMuiTheme, CssBaseline,
+    Switch, ThemeProvider, createTheme, CssBaseline,
     FormControl, FormGroup, FormControlLabel, Grid, Typography, Link
 } from '@material-ui/core';
 import alanBtn from '@alan-ai/alan-sdk-web';
@@ -18,7 +18,7 @@ const App = () => {
     const classes = useStyles();
 
     const [darkMode, setDarkMode] = useState(false);
-    const theme = createMuiTheme({
+    const theme = createTheme({
         palette: {
             type: darkMode ? 'dark' : 'light'
         }
@@ -52,7 +52,7 @@ const App = () => {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <div>
-                <Grid container alignItems="flex-start" justify="flex-end" direction="row">
+                <Grid container alignItems="flex-start" justifyContent="flex-end" direction="row">
                     <FormControl component="fieldset">
                         <FormGroup>
                             <FormControlLabel
