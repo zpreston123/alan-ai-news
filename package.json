@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://zpreston123.github.io/alan-ai-news/",
   "dependencies": {
-    "@alan-ai/alan-sdk-web": "^1.8.27",
+    "@alan-ai/alan-sdk-web": "^1.8.28",
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
