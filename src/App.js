@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-    Switch, ThemeProvider, createTheme, CssBaseline,
-    FormControl, FormGroup, FormControlLabel, Grid, Typography, Link
-} from '@material-ui/core';
+import { ThemeProvider, createTheme, CssBaseline, Grid, Typography, Link, Tooltip, IconButton } from '@material-ui/core';
+import { Brightness2, Brightness5 } from '@material-ui/icons';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
 import wordsToNumbers from 'words-to-numbers';
@@ -53,15 +51,11 @@ const App = () => {
             <CssBaseline />
             <div>
                 <Grid container alignItems="flex-start" justifyContent="flex-end" direction="row">
-                    <FormControl component="fieldset">
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<Switch onChange={() => setDarkMode(!darkMode)} />}
-                                label="Dark"
-                                labelPlacement="start"
-                            />
-                        </FormGroup>
-                    </FormControl>
+                    <Tooltip title={darkMode ? 'Toggle light theme' : 'Toggle dark theme'}>
+                        <IconButton onClick={() => setDarkMode(!darkMode)}>
+                            {darkMode ? <Brightness5 /> : <Brightness2 />}
+                        </IconButton>
+                    </Tooltip>
                 </Grid>
                 <div className={classes.logoContainer}>
                     {newsArticles.length ? (
