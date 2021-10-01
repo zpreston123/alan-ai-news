@@ -64,7 +64,7 @@ const App = () => {
                             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
                         </div>
                     ) : null}
-                    <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo" />
+                    <img src="https://alan.app/previews/preview.png" className={classes.alanLogo} alt="alan logo" />
                 </div>
                 <NewsCards articles={newsArticles} activeArticle={activeArticle} />
                 <div className={classes.footer}>
